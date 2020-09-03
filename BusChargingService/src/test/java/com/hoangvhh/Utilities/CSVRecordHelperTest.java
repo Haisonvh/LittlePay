@@ -67,8 +67,7 @@ public class CSVRecordHelperTest {
         data.setToStopId("Stop2");
         datas.add(data);
         CSVRecordHelper.writeCSVFile(datas, "testOut.csv");
-        ClassLoader classLoader = getClass().getClassLoader();
-        File file = new File(classLoader.getResource("testData.csv").getFile());
-        Assert.assertTrue(file.getAbsolutePath().endsWith("testData.csv"));
+        File file = new File("./testOut.csv");        
+        Assert.assertTrue(file.getAbsolutePath().endsWith("testOut.csv"));
     }
 }

@@ -10,6 +10,7 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -36,5 +37,10 @@ public class Utils {
     public static String dateToString(Date date){
         DateFormat formatter=new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         return formatter.format(date);
+    }
+    
+    public static long difInSecCalculate(Date fromDate, Date toDate){
+        long diffInMillies = toDate.getTime() - fromDate.getTime();
+        return TimeUnit.SECONDS.convert(diffInMillies, TimeUnit.MILLISECONDS);
     }
 }
