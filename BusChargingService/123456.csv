@@ -1,2 +1,2 @@
 Started,Finished,DurationSecs,FromStopId,ToStopId,ChargeAmount,CompanyId,BusID,PAN,Status
-03-09-2020 20:29:58,03-09-2020 20:29:58,30,Stop1,Stop2,3.0,Stop1,C01,B01,P01,COMPLETED
+03-09-2020 22:32:35,03-09-2020 22:32:35,30,Stop1,Stop2,3.0,C01,B01,P01,COMPLETED

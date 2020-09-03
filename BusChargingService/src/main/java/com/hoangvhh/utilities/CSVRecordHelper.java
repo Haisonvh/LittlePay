@@ -77,7 +77,6 @@ public class CSVRecordHelper {
                             record.getFromStopId(),
                             record.getToStopId(),
                             String.valueOf(record.getChargeAmount()),
-                            record.getFromStopId(),
                             record.getCompanyId(),
                             record.getBusID(),
                             record.getPAN(),
