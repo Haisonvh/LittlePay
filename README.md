@@ -16,13 +16,31 @@ This service will simply receive a CSV file then responses a reference number wh
  /api/download/{reference}: download the aggregated file.
  
  -- Source structure --
-|-model
-|-exception
-|-service
-|-utilities
-|-Application.java
-|-Controller.java
+    .
+    ├── model      
+    │   ├── ModelRoute.java            # the model of each route record in input CSV file  
+    │   ├── ModelChargingRecord.java   # the model of each charging record in output CSV file  
+    │   └── RecordIdentity.java        # class defines identity of each record.
+    ├── exception
+    ├── services
+    │   ├── RoutePlanService.java      # interface defines methods regarding getting cost based on stopID  
+    │   └── RoutePlanServiceImpl.java  
+    ├── utilities
+    │   └── Utils.java                 # define support methods      
+    ├── Application.java               # Main Spring boot Application 
+    └── Controller.java                # Main RESful controller
 
+-- Resources structure --
+    .
+    ├── RoutePlan.csv                 # information of the cost for each route 
+    └── application.properties        # propertites of the proejct
+    
+-- Test packages structure --
+    .
+    ├── services
+    │   └── RoutePlanServiceTest.java # testcase for RoutePlanService
+    
+    
 -------------------
 Develop environment
 -------------------
