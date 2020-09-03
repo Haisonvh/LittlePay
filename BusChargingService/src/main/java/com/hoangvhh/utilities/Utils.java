@@ -9,6 +9,7 @@ package com.hoangvhh.utilities;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
@@ -42,5 +43,10 @@ public class Utils {
     public static long difInSecCalculate(Date fromDate, Date toDate){
         long diffInMillies = toDate.getTime() - fromDate.getTime();
         return TimeUnit.SECONDS.convert(diffInMillies, TimeUnit.MILLISECONDS);
+    }
+    
+    public static String genReference(){
+        //simply get epoch time as a reference
+        return String.valueOf(Instant.now().toEpochMilli());
     }
 }
