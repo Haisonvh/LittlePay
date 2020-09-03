@@ -16,6 +16,7 @@ This service will simply receive a CSV file then responses a reference number wh
  /api/download/{reference}: download the aggregated file.
  
  -- Source structure --
+  
     .
     ├── model      
     │   ├── ModelRoute.java            # the model of each route record in input CSV file  
@@ -31,11 +32,13 @@ This service will simply receive a CSV file then responses a reference number wh
     └── Controller.java                # Main RESful controller
 
 -- Resources structure --
+   
     .
     ├── RoutePlan.csv                 # information of the cost for each route 
     └── application.properties        # propertites of the proejct
     
 -- Test packages structure --
+   
     .
     ├── services
     │   └── RoutePlanServiceTest.java # testcase for RoutePlanService
