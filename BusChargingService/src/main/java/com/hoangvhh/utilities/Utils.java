@@ -32,4 +32,9 @@ public class Utils {
         }
         return response;
     }
+    
+    public static String dateToString(Date date){
+        DateFormat formatter=new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+        return formatter.format(date);
+    }
 }
